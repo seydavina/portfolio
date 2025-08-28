@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seydina YADE | Ingénieur logiciel Cloud & DevOps</title>
+    <meta
+      name="description"
+      content="Portfolio de Seydina Limamou Laye YADE - Ingénieur logiciel spécialisé en Cloud & DevOps. Projets, expériences, compétences et contact."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hero" class="brand" aria-label="Accueil">SY</a>
+        <nav class="nav">
+          <button class="nav-toggle" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="nav-list">
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#experience">Expériences</a></li>
+            <li><a href="#education">Formations</a></li>
+            <li>
+              <a class="btn btn-primary btn-small" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section d’accueil -->
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-title">Seydina Limamou Laye YADE</h1>
+          <p class="hero-role">
+            Ingénieur logiciel spécialisé en Cloud & DevOps
+          </p>
+          <p class="hero-value">
+            Je transforme des idées en solutions logicielles fiables et
+            scalables.
+          </p>
+          <div class="hero-ctas">
+            <a
+              class="btn btn-primary"
+              href="#projects"
+              aria-label="Voir mes projets"
+              >Voir mes projets</a
+            >
+            <a class="btn btn-ghost" href="#contact" aria-label="Contactez-moi"
+              >Contactez-moi</a
+            >
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="blob"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">À propos</h2>
+        <p class="lead">
+          Ingénieur logiciel orienté produit, je conçois et livre des
+          applications robustes avec une attention forte pour la qualité, la
+          sécurité et l’automatisation. Mon expertise couvre le Cloud Computing,
+          le backend Laravel/PHP, le frontend Vue.js, et les pratiques DevOps
+          (CI/CD, conteneurisation). J’aime convertir des besoins métiers en
+          solutions simples, maintenables et mesurables en production. Mon
+          ambition: apporter rapidement de la valeur à l’entreprise tout en
+          bâtissant des fondations techniques durables.
+        </p>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Compétences</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>Backend</h3>
+            <ul>
+              <li>PHP, Laravel</li>
+              <li>Node.js (basics), REST APIs</li>
+              <li>Tests (PHPUnit), Auth, Caching</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-display"></i></div>
+            <h3>Frontend</h3>
+            <ul>
+              <li>Vue.js, Vite</li>
+              <li>HTML5, CSS3, TailwindCSS</li>
+              <li>UX pragmatique, accessibilité</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+            <h3>Cloud & DevOps</h3>
+            <ul>
+              <li>AWS (EC2, S3, RDS)</li>
+              <li>Docker, Nginx</li>
+              <li>CI/CD (GitHub Actions, GitLab CI)</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Bases de données</h3>
+            <ul>
+              <li>MySQL, PostgreSQL</li>
+              <li>Redis (cache/queues)</li>
+              <li>Migrations, optimisation requêtes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projets</h2>
+
+        <div class="projects-grid">
+          <!-- Projet 1 -->
+          <article class="project-card">
+            <img
+              src="assets/projects/taggatma.jpg"
+              alt="Capture d’écran Taggatma"
+            />
+            <div class="project-content">
+              <h3>Taggatma</h3>
+              <p>
+                Plateforme e-commerce locale avec gestion de catalogue et
+                commandes.
+              </p>
+              <div class="techs">
+                <span>Laravel</span><span>Vue.js</span><span>MySQL</span
+                ><span>Docker</span>
+              </div>
+              <div class="links">
+                <a
+                  class="link"
+                  href="https://www.taggatma.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >Démo</a
+                >
+                <a
+                  class="link"
+                  href="https://github.com/seydavina"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="project-card">
+            <img
+              src="assets/projects/stade-dembour.jpg"
+              alt="Capture d’écran Stade Dembour"
+            />
+            <div class="project-content">
+              <h3>Stade Dembour</h3>
+              <p>
+                Site vitrine + back-office d’administration pour un club
+                sportif.
+              </p>
+              <div class="techs">
+                <span>Laravel</span><span>Tailwind</span><span>MySQL</span>
+              </div>
+              <div class="links">
+                <a
+                  class="link"
+                  href="https://www.stadedembour.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >Démo</a
+                >
+                <a
+                  class="link"
+                  href="https://admin.stadedembour.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >Admin</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="project-card">
+            <img
+              src="assets/projects/nawetane.jpg"
+              alt="Capture d’écran Nawetane"
+            />
+            <div class="project-content">
+              <h3>Nawetane</h3>
+              <p>
+                Application web pour suivre compétitions locales et résultats.
+              </p>
+              <div class="techs">
+                <span>Laravel</span><span>Vue.js</span><span>PostgreSQL</span>
+              </div>
+              <div class="links">
+                <a
+                  class="link"
+                  href="https://www.nawetane.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >Démo</a
+                >
+                <a
+                  class="link"
+                  href="https://github.com/seydavina"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- (Optionnel) Projet 4 & 5: dupliquer la carte au besoin -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline d’expériences -->
+    <section id="experience" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Expériences</h2>
+        <div class="timeline">
+          <!-- Exemple 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Ingénieur Logiciel (Freelance)</h3>
+              <p class="muted">Divers clients · 2023 — Présent</p>
+              <ul>
+                <li>
+                  Optimisation du processus de déploiement (-30% du temps) via
+                  Docker + GitHub Actions.
+                </li>
+                <li>
+                  Développement d’API sécurisées (JWT) consommées par 500+
+                  utilisateurs.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Exemple 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Développeur Backend (Stage)</h3>
+              <p class="muted">Entreprise — 2022</p>
+              <ul>
+                <li>
+                  Mise en place de tests automatisés (+40% de couverture) et
+                  intégration continue.
+                </li>
+                <li>
+                  Conception de modules Laravel réutilisables pour accélérer la
+                  livraison.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Ajoutez vos postes/stages réels ici -->
+        </div>
+        <p class="note">
+          Remplacez/complétez ces exemples par vos expériences et impacts réels.
+        </p>
+      </div>
+    </section>
+
+    <!-- Formations & Certifications -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Formations & Certifications</h2>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <div class="edu-logo">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h3>Diplôme en Ingénierie Logicielle</h3>
+              <p class="muted">
+                Compétences validées en conception logicielle, qualité et
+                architecture.
+              </p>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-logo"><i class="fa-brands fa-aws"></i></div>
+            <div>
+              <h3>Certifications Cloud & DevOps</h3>
+              <ul class="links-list">
+                <li>
+                  <a
+                    href="https://www.credly.com/badges/952fcb8f-ca18-4ead-a550-dbcb3a42244d"
+                    target="_blank"
+                    rel="noopener"
+                    >IBM DevOps (badge)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.credly.com/badges/d45da371-ba22-4af8-a2c3-5969c2f4ed81/public_url"
+                    target="_blank"
+                    rel="noopener"
+                    >Certification IBM (badge)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.coursera.org/account/accomplishments/verify/Z3RBI6WQP31Y"
+                    target="_blank"
+                    rel="noopener"
+                    >Coursera (vérification)</a
+                  >
+                </li>
+              </ul>
+              <p class="muted">Compétences validées en Cloud et CI/CD.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Points forts -->
+    <section id="strengths" class="section">
+      <div class="container">
+        <h2 class="section-title">Ce que j’apporte</h2>
+        <div class="strengths-grid">
+          <div class="strength-card">
+            <div class="strength-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Adaptabilité</h3>
+            <p>À l’aise dans des contextes en évolution rapide.</p>
+          </div>
+          <div class="strength-card">
+            <div class="strength-icon"><i class="fa-solid fa-users"></i></div>
+            <h3>Esprit d’équipe</h3>
+            <p>Collaboration fluide avec produit, QA et ops.</p>
+          </div>
+          <div class="strength-card">
+            <div class="strength-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Apprentissage rapide</h3>
+            <p>Capacité à monter en compétence sur de nouveaux stacks.</p>
+          </div>
+          <div class="strength-card">
+            <div class="strength-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Passion</h3>
+            <p>Goût pour la tech utile, simple et maintenable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-card">
+          <p class="lead">Disponible pour un entretien</p>
+          <div class="contact-actions">
+            <a
+              class="btn btn-primary"
+              href="mailto:seydinalimamoulayeyade@gmail.com"
+              ><i class="fa-solid fa-envelope"></i> Email</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://www.linkedin.com/in/limamou-laye"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/seydavina"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-brands fa-github"></i> GitHub</a
+            >
+          </div>
+          <p class="muted small">Email pro: seydinalimamoulayeyade@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Seydina Limamou Laye YADE</strong> — Ingénieur logiciel
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/seydavina" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/limamou-laye"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="muted small">
+          Portfolio mis à jour régulièrement — dernière mise à jour août 2025
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

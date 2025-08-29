@@ -1,0 +1,50 @@
+name: Generate PDF Portfolio
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install temporary deps (serve + puppeteer)
+        run: |
+          npm init -y
+          npm i puppeteer serve
+
+      - name: Start local server
+        run: |
+          npx serve -l 4173 . >/dev/null 2>&1 &
+          # attendre que le serveur réponde
+          timeout 60 bash -c 'until curl -sSf http://localhost:4173 >/dev/null; do sleep 1; done'
+
+      - name: Generate PDF
+        run: node scripts/generate-pdf.mjs
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-pdf
+          path: portfolio.pdf
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Commit PDF to repo (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add portfolio.pdf
+          git diff --cached --quiet && echo "No PDF changes" || (git commit -m "chore: update portfolio.pdf" && git push)

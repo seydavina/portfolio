@@ -1,0 +1,7 @@
+# Fichiers à ne pas uploader par Vercel (si présents)
+.git/
+.github/
+node_modules/
+scripts/
+*.md
+*.pdf

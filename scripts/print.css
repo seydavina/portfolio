@@ -1,0 +1,84 @@
+/* Feuille d’impression (A4) pour un PDF propre */
+@page {
+  size: A4;
+  margin: 12mm 12mm 16mm 12mm;
+}
+@media print {
+  html,
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  /* Cacher éléments non utiles à l’impression */
+  .site-header,
+  .hero-visual,
+  .nav,
+  .nav-toggle,
+  .contact-actions .btn:not(.btn-primary) {
+    display: none !important;
+  }
+
+  /* Liens sous forme d’URL optionnelle (commenter si non désiré) */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #444;
+  }
+  /* Ne pas ajouter l’URL pour les ancres internes */
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Couleurs lisibles sur papier */
+  .hero-role {
+    color: #0a6bff !important;
+  }
+  .section.alt {
+    background: #fff !important;
+  }
+  .skill-icon,
+  .strength-icon,
+  .edu-logo {
+    background: #e9eef7 !important;
+    color: #0a6bff !important;
+  }
+
+  /* Cartes et séparateurs */
+  .project-card,
+  .skill-card,
+  .edu-card,
+  .testimonial,
+  .contact-card,
+  .timeline-content {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+
+  /* Gestion des sauts de page */
+  .section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .project-card,
+  .edu-card,
+  .testimonial,
+  .timeline-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Réduction des paddings pour optimiser la pagination */
+  .section {
+    padding: 18mm 0 12mm 0 !important;
+  }
+  .container {
+    padding: 0 8mm !important;
+  }
+
+  /* Titres plus sobres */
+  .section-title {
+    margin: 0 0 6mm 0 !important;
+  }
+}
